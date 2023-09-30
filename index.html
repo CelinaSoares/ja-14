@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>::Desafio aula 14 ::</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="galeria.html">
+  <link rel="stylesheet" href="estiloaula14.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-32x32.png">
+</head>
+
+<body>
+  <header class="header">
+    <img src="pawprint.gif" alt="" class="header_logo">
+    
+    <span id= "hamburguer" class="material-symbols-outlined">
+      menu
+      </span>
+    <nav id="itens_menu" class="header_nav">
+      <ul>
+        <li><a href="#">Menu 01</a></li>
+        <li><a href="#">Menu 02</a></li>
+        <li><a href="#">Menu 03</a></li>
+        <li><a href="#">Menu 04</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    var hamburguer = document.getElementById('hamburguer');
+    var itens_menu = document.getElementById('itens_menu');
+
+    hamburguer.addEventListener('click', aparecer);
+
+    function aparecer(){
+      if(itens_menu.style.display == 'block'){
+        itens_menu.classList.remove('show');
+      }else{
+        itens_menu.classList.toggle('show');
+      }
+    }
+  </script>
+
+  <main>
+    <section class="fundo_main">
+      <div class="galeria">
+        <a href="galeria.html" target="_blank">Galeria</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="logos_footer">
+      <div><a href="#"><img src="instagram.png" alt class="tamanho"></a></div>
+      <div><a href="#"><img src="github.png" alt class="tamanho"></a></div>
+      <div><a href="#"><img src="whatsapp.png" alt class="tamanho"></a></div>
+      <div><a href="#"><img src="facebook.png" alt class="tamanho"></a></div>
+    </div>
+      
+    <p class="texto_footer">Elas na Tech / Aluna Celina Soares</p>
+  </footer>
+</body>
+</html>
